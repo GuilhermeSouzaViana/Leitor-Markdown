@@ -1,7 +1,0 @@
-console.log("Script teste realizado!!!")
-console.log("Script teste realizado!!!")
-console.log("Script teste realizado!!!")
-console.log("Script teste realizado!!!")
-console.log("Script teste realizado!!!")
-console.log("Script teste realizado!!!")
-console.log("Script teste realizado!!!")
