@@ -10,5 +10,6 @@ function leitura(caminho){
 }
 
 //leitura("./arquivos/texto.md")
+//Feito por:Guilherme Souza Viana Coqueiro
 
 export default leitura;

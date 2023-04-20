@@ -1,3 +1,4 @@
+//Feito por:Guilherme Souza Viana Coqueiro
 import pegaArquivo from "./index.js";  
 import leitura from "./leitura.js";
 import extraiLinks from "./links.js";
@@ -13,21 +14,33 @@ async function processaTexto(caminho){
     if(caminho[3] === 'validar'){
         console.log(chalk.cyan("LINKS VALIDADOS: "),await validaURL (resultado))
     }
+
+    /*else if(caminho[3] === 'validar' && caminho === null){
+        console.log("Este arquivo não apresenta nenhum link")
+    }*/
     
     else if(caminho[3] === 'leitura'){
            await leitura(caminho[2])
     }
 
+      /*else if(caminho[3] === 'leitura' && caminho === null){
+        console.log("Este arquivo não apresenta nenhum link")
+    }*/
+
     else if(caminho[3] === 'links'){
         const linkTexto="São geralmente recuperados a partir de um objeto [FileList](https://developer.mozilla.org/pt-BR/docs/Web/API/FileList) que é retornado como resultado da seleção, pelo usuário, de arquivos através do elemento [<input>](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/Input), a partir do objeto [DataTransfer](https://developer.mozilla.org/pt-BR/docs/Web/API/DataTransfer) utilizado em operações de arrastar e soltar, ou a partir da API `mozGetAsFile()` em um [HTMLCanvasElement](https://developer.mozilla.org/pt-BR/docs/Web/API/HTMLCanvasElement). Em Gecko, códigos com privilégiios podem criar objetos File representando qualquer arquivo local sem a intereção do usuário (veja [Implementation notes](https://developer.mozilla.org/pt-BR/docs/Web/API/File#implementation_notes) para mais informações.)"
+        //const vazio=""
         extraiLinks(linkTexto)
     }
        
     else{
-        console.log(chalk.red("Erro de programa: Arquivo não encontrado"))
+        console.log(chalk.red("Erro de programa: informe a função desejada corretamente"))
     }
 
 }
 
+
+
 processaTexto(caminho);
 
+//Feito por:Guilherme Souza Viana Coqueiro
